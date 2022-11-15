@@ -1,0 +1,14 @@
+.primary-heading {
+  color: #000000;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+@media screen and (min-width: 768px) {
+  .primary-heading {
+    font-size: 28px;
+    line-height: 34px;
+    font-weight: 700;
+  }
+}
