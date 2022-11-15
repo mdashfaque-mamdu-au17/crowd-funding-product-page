@@ -1,0 +1,17 @@
+.main-card {
+  background-color: #ffffff;
+  position: absolute;
+  top: 244px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  min-width: 327px;
+  max-width: 730px;
+  border-radius: 8px;
+}
+
+@media screen and (min-width: 768px) {
+  .main-card {
+    top: 308px;
+    width: 730px;
+  }
+}
