@@ -1,0 +1,24 @@
+.primary-btn {
+  color: #ffffff;
+  font-weight: 700;
+  border-style: none;
+  background-color: #3cb3ab;
+  border-radius: 33.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 1s;
+}
+
+.primary-btn:hover {
+  background-color: #147a73;
+  transition: background-color 1s;
+  cursor: pointer;
+}
+
+.btn-large {
+  font-size: 16px;
+  line-height: 20px;
+  width: 214px;
+  height: 56px;
+}
