@@ -5,6 +5,8 @@ import classes from './BackProjectSection.module.css';
 import MasterCraftLogo from '../../assets/logo-mastercraft.svg';
 import Paragraph from '../Texts/Paragraph';
 import Button from '../Button/Button';
+import BookMarkIcon from '../Button/BookMarkIcon';
+
 const BackProjectSection = () => {
   return (
     <Card primary={true}>
@@ -26,6 +28,15 @@ const BackProjectSection = () => {
         <div className={classes['button-section']}>
           <Button type="primary" size="large">
             Back this project
+          </Button>
+          <Button type="secondary" size="small">
+            <span className={classes['bookmark-icon-mobile']}>
+              <BookMarkIcon />
+            </span>
+            <span className={classes['bookmark-icon-web']}>
+              <BookMarkIcon fillColor="#707070" />
+            </span>
+            <span className={classes['bookmark-title']}>Bookmark</span>
           </Button>
         </div>
       </section>

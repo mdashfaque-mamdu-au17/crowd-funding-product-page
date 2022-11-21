@@ -18,8 +18,45 @@
   padding: 16px 0 24px 0;
 }
 
+.button-section {
+  display: flex;
+  gap: 9px;
+}
+
+.bookmark-title {
+  display: none;
+}
+
+.bookmark-icon-web {
+  display: none;
+}
+
 @media screen and (min-width: 768px) {
   .backproject-section {
     padding: 56px 48px 48px 48px;
+  }
+
+  .description {
+    padding: 15px 0 40px 0;
+  }
+
+  .button-section {
+    justify-content: space-between;
+  }
+  .bookmark-title {
+    display: block;
+    padding-left: 16px;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 700;
+    color: #7a7a7a;
+  }
+
+  .bookmark-icon-mobile {
+    display: none;
+  }
+
+  .bookmark-icon-web {
+    display: block;
   }
 }
