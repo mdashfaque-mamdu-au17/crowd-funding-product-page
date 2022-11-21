@@ -12,6 +12,13 @@ const Button = ({ type, size, children }) => {
       </button>
     );
   }
+  if (type === 'secondary') {
+    return (
+      <button className={classNames(classes['secondary-btn'])}>
+        {children}
+      </button>
+    );
+  }
 };
 
 export default Button;
