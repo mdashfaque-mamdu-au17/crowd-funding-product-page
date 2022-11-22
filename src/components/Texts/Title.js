@@ -1,9 +1,12 @@
 import React from 'react';
 import classes from './Title.module.css';
 
-const Title = ({ primary, content }) => {
+const Title = ({ primary, children }) => {
   if (primary) {
-    return <h1 className={classes['primary-heading']}>{content}</h1>;
+    return <h1 className={classes['primary-heading']}>{children}</h1>;
+  }
+  if (!primary) {
+    return <h1 className={classes['primary-digits']}>{children}</h1>;
   }
 };
 

@@ -5,6 +5,11 @@
   font-weight: 700;
 }
 
+.primary-digits {
+  font-size: 32px;
+  line-height: 39px;
+  font-weight: 700;
+}
 @media screen and (min-width: 768px) {
   .primary-heading {
     font-size: 28px;
