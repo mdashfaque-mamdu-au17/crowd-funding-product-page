@@ -17,7 +17,7 @@ const BackProjectSection = () => {
           className={classes['logo-mastercraft']}
         />
         <div className={classes['title-box']}>
-          <Title primary={true} content="Mastercraft Bamboo Monitor Riser" />
+          <Title primary={true}>Mastercraft Bamboo Monitor Riser</Title>
         </div>
         <div className={classes.description}>
           <Paragraph
