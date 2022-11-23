@@ -6,8 +6,23 @@
 }
 
 .primary-digits {
+  color: #000000;
   font-size: 32px;
   line-height: 39px;
+  font-weight: 700;
+}
+
+.primary-small-heading {
+  color: #000000;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 700;
+}
+
+.secondary-heading {
+  color: #000000;
+  font-size: 14px;
+  line-height: 17px;
   font-weight: 700;
 }
 @media screen and (min-width: 768px) {
@@ -15,5 +30,15 @@
     font-size: 28px;
     line-height: 34px;
     font-weight: 700;
+  }
+
+  .primary-small-heading {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .secondary-heading {
+    font-size: 18px;
+    line-height: 22px;
   }
 }
