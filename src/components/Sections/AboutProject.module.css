@@ -1,0 +1,27 @@
+.about-project-section {
+  padding: 40px 24px;
+}
+
+.para-first {
+  padding: 24px 0;
+}
+
+.pledges-section {
+  padding-top: 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+@media screen and (min-width: 768px) {
+  .about-project-section {
+    padding: 48px 48px;
+  }
+
+  .para-first {
+    padding: 35px 0;
+  }
+
+  .pledges-section {
+    padding-top: 40px;
+  }
+}
