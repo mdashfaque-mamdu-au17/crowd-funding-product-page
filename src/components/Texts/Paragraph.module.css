@@ -1,13 +1,31 @@
-.para-primary {
+.para-primary,
+.para-secondary {
   font-size: 14px;
   font-weight: 400;
   line-height: 24px;
   color: #7a7a7a;
 }
 
+.primary-amount {
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 500;
+  color: #3cb3ab;
+}
+
 @media screen and (min-width: 768px) {
   .para-primary {
     font-size: 16px;
     line-height: 20px;
+  }
+
+  .para-secondary {
+    font-size: 16px;
+    line-height: 30px;
+  }
+
+  .primary-amount {
+    font-size: 15px;
+    line-height: 18px;
   }
 }
