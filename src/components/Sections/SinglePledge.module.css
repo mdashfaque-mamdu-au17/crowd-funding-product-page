@@ -1,0 +1,43 @@
+.single-pledge {
+  padding: 24px;
+}
+
+.single-pledge-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.para {
+  padding: 24px 0;
+}
+
+.pledge-left {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding-bottom: 24px;
+}
+
+.single-pledge-disable {
+  opacity: 0.5;
+}
+@media screen and (min-width: 768px) {
+  .single-pledge {
+    padding: 38px 32px 32px 32px;
+  }
+
+  .single-pledge-details {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .pledge-left {
+    padding-bottom: 0;
+  }
+
+  .pledge-actions {
+    display: flex;
+    justify-content: space-between;
+  }
+}
