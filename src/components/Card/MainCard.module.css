@@ -7,6 +7,7 @@
   min-width: 327px;
   max-width: 730px;
   border-radius: 8px;
+  padding-bottom: 70px;
 }
 
 .backed-details-section {
@@ -17,5 +18,6 @@
   .main-card {
     top: 308px;
     width: 730px;
+    padding-bottom: 124px;
   }
 }

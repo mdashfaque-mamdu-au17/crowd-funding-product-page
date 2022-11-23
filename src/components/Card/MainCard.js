@@ -2,6 +2,7 @@ import React from 'react';
 import classes from './MainCard.module.css';
 import BackProjectSection from '../Sections/BackProjectSection';
 import BackedDetailsSection from '../Sections/BackedDetailsSection';
+import AboutProject from '../Sections/AboutProject';
 const MainCard = ({ children }) => {
   return (
     <div className={classes['main-card']}>
@@ -11,6 +12,9 @@ const MainCard = ({ children }) => {
         </div>
         <div className={classes['backed-details-section']}>
           <BackedDetailsSection />
+        </div>
+        <div className={classes['about-project-section']}>
+          <AboutProject />
         </div>
       </section>
     </div>
