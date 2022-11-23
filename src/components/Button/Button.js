@@ -2,9 +2,24 @@ import classNames from 'classnames';
 import React from 'react';
 import classes from './Button.module.css';
 
-const Button = ({ type, size, children }) => {
+const Button = ({ type, size, children, isDisabled }) => {
   const btnSizeClass =
     size === 'large' ? classes['btn-large'] : classes['btn-small'];
+  if (type === 'primary' && size === 'medium') {
+    return (
+      <button
+        className={classNames(
+          classes['primary-btn'],
+          classes['btn-medium'],
+
+          isDisabled && classes['btn-medium-disabled']
+        )}
+        disabled={isDisabled}
+      >
+        {children}
+      </button>
+    );
+  }
   if (type === 'primary') {
     return (
       <button className={classNames(classes['primary-btn'], btnSizeClass)}>

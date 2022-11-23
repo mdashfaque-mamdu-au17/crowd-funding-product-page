@@ -31,6 +31,20 @@
 .secondary-btn:hover {
   cursor: pointer;
 }
+
+.btn-medium {
+  width: 157px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+}
+
+.btn-medium-disabled,
+.btn-medium-disabled:hover {
+  background-color: rgba(47, 47, 47, 0.5);
+  pointer-events: none;
+}
+
 @media screen and (min-width: 768px) {
   .btn-large {
     width: 204px;
