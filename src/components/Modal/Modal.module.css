@@ -1,0 +1,61 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 20;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal {
+  position: fixed;
+
+  left: calc(50% - 163.5px);
+  z-index: 30;
+  background-color: #ffffff;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.0497193);
+  animation: slide-down 300ms ease-out forwards;
+  overflow: hidden;
+}
+
+.select-pledge {
+  top: 121px;
+  width: 327px;
+}
+
+.welcome-modal {
+  width: 327px;
+  top: 143px;
+}
+
+.menu-modal {
+  top: 88px;
+  min-width: 327px;
+}
+@media (min-width: 768px) {
+  .select-pledge {
+    top: 184px;
+    width: 730px;
+    left: calc(50% - 365px);
+  }
+
+  .welcome-modal {
+    width: 540px;
+    left: calc(50% - 270px);
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+}
+
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-3rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
