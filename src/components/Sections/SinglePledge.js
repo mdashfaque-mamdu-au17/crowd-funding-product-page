@@ -35,7 +35,7 @@ const SinglePledge = ({
           </div>
           <div>
             <Button type="primary" size="medium" isDisabled={isDisabled}>
-              Select Reward
+              {!isDisabled ? 'Select Reward' : 'Out of stock'}
             </Button>
           </div>
         </div>
