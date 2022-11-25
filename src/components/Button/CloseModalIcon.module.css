@@ -1,0 +1,10 @@
+.close-modal-svg {
+  fill: '#000';
+  opacity: 0.4;
+}
+
+.close-modal-svg:hover {
+  opacity: unset;
+  fill: #000;
+  cursor: pointer;
+}
