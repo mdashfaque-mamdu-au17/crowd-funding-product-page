@@ -1,4 +1,32 @@
-.modal-primary {
+.select-pledge-main {
+  position: relative;
+  padding: 32px 24px;
+}
+
+.select-pledge-heading h3 {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 700;
+  color: #000000;
+}
+.close-btn {
   position: absolute;
-  top: 121px;
+  top: 32px;
+  right: 23px;
+  border-style: none;
+  background-color: white;
+}
+
+@media screen and (min-width: 768px) {
+  .select-pledge-heading h3 {
+    font-size: 24px;
+    line-height: 29px;
+  }
+  .select-pledge-main {
+    padding: 48px 48px;
+  }
+
+  .close-btn {
+    right: 26px;
+  }
 }
