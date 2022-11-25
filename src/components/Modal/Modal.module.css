@@ -34,6 +34,7 @@
   top: 88px;
   min-width: 327px;
 }
+
 @media (min-width: 768px) {
   .select-pledge {
     top: 184px;
