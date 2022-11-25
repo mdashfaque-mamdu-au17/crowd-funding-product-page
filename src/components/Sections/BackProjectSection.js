@@ -7,7 +7,7 @@ import Paragraph from '../Texts/Paragraph';
 import Button from '../Button/Button';
 import BookMarkIcon from '../Button/BookMarkIcon';
 
-const BackProjectSection = () => {
+const BackProjectSection = ({ onOpen }) => {
   return (
     <Card primary={true}>
       <section className={classes['backproject-section']}>
@@ -26,7 +26,7 @@ const BackProjectSection = () => {
           />
         </div>
         <div className={classes['button-section']}>
-          <Button type="primary" size="large">
+          <Button type="primary" size="large" onClick={onOpen}>
             Back this project
           </Button>
           <Button type="secondary" size="small">
