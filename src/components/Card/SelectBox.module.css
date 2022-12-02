@@ -1,0 +1,44 @@
+.card {
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.card-active {
+  border: 2px solid #3cb3ab;
+}
+
+input[type='radio'] {
+  appearance: none;
+  background-color: #fff;
+  font: inherit;
+  color: rgba(0, 0, 0, 0.15);
+  margin: 0;
+  width: 24px;
+  height: 24px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+}
+
+input[type='radio']::before {
+  content: '';
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 12px 12px #3cb3ab;
+}
+
+input[type='radio']:checked::before {
+  transform: scale(1);
+}
+
+.label:hover input[type='radio'] {
+  border-color: #3cb3ab;
+}
+
+.label:hover {
+  color: #3cb3ab;
+}

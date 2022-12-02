@@ -17,6 +17,9 @@
   background-color: white;
 }
 
+.para-div {
+  padding: 24px 0;
+}
 @media screen and (min-width: 768px) {
   .select-pledge-heading h3 {
     font-size: 24px;
@@ -28,5 +31,9 @@
 
   .close-btn {
     right: 26px;
+  }
+
+  .para-div {
+    padding: 16px 0 32px 0;
   }
 }
