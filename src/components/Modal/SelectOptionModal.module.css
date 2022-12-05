@@ -20,6 +20,12 @@
 .para-div {
   padding: 24px 0;
 }
+
+.select-box-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
 @media screen and (min-width: 768px) {
   .select-pledge-heading h3 {
     font-size: 24px;
