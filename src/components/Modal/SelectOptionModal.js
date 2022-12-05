@@ -23,8 +23,42 @@ const SelectOptionModal = ({ onClose }) => {
           />
         </div>
 
-        <div>
-          <SelectBox />
+        <div className={classes['select-box-container']}>
+          <div>
+            <SelectBox
+              pledgeName="Pledge with no reward"
+              withReward={false}
+              rewardDetails="Choose to support us without a reward if you simply believe in our project. As a backer, you will be signed up to receive product updates via email."
+            />
+          </div>
+          <div>
+            <SelectBox
+              pledgeName="Bamboo Stand"
+              withReward={true}
+              minReward={25}
+              rewardLeft={105}
+              rewardDetails="You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and you'll be added to a special Backer member list."
+            />
+          </div>
+          <div>
+            <SelectBox
+              pledgeName="Black Edition Stand"
+              withReward={true}
+              minReward={75}
+              rewardLeft={64}
+              rewardDetails="You get a Black Special Edition computer stand and a personal thank you. You'll be added to our Backer member list. Shipping is included."
+            />
+          </div>
+          <div>
+            <SelectBox
+              isDisabled={true}
+              pledgeName="Mahogany Special Edition"
+              withReward={true}
+              minReward={200}
+              rewardLeft={0}
+              rewardDetails="You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You'll be added to our Backer member list.  Shipping is included."
+            />
+          </div>
         </div>
       </section>
     </Modal>
@@ -32,5 +66,3 @@ const SelectOptionModal = ({ onClose }) => {
 };
 
 export default SelectOptionModal;
-
-// type="select-pledge", type="welcome-modal", type="menu-modal"

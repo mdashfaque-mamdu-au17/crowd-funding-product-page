@@ -38,7 +38,9 @@
 @media (min-width: 768px) {
   .select-pledge {
     top: 184px;
+    bottom: 184px;
     width: 730px;
+    overflow-y: auto;
     left: calc(50% - 365px);
   }
 
