@@ -40,9 +40,19 @@
 }
 
 .btn-medium-disabled,
-.btn-medium-disabled:hover {
+.btn-medium-disabled:hover,
+.btn-small-disabled,
+.btn-small-disabled:hover {
   background-color: rgba(47, 47, 47, 0.5);
   pointer-events: none;
+}
+
+.btn-small {
+  height: 48px;
+  width: 107px;
+  font-size: 700;
+  font-size: 14px;
+  line-height: 17px;
 }
 
 @media screen and (min-width: 768px) {
