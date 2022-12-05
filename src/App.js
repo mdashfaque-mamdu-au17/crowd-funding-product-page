@@ -4,6 +4,7 @@ import MainCard from './components/Card/MainCard';
 import SelectOptionModal from './components/Modal/SelectOptionModal';
 import Navbar from './components/Navbar/Navbar';
 import { enableScroll, disableScroll } from './utils/utils';
+
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const closeModal = () => {
