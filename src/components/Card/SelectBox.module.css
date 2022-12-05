@@ -2,10 +2,15 @@
   border-radius: 8px;
   border: 1px solid rgba(0, 0, 0, 0.15);
   padding: 24px;
+  height: max-content;
 }
 
 .card-active {
   border: 2px solid #3cb3ab;
+}
+
+.card-disabled {
+  opacity: 0.5;
 }
 
 input[type='radio'] {
@@ -70,7 +75,100 @@ input[type='radio']:checked::before {
 .para-container {
   padding-top: 24px;
 }
+
+.amount-section-hidden {
+  display: none;
+}
+.amount-left-section,
+.amount-left-web {
+  padding: 26px 0;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22px;
+}
+
+.amount-left-section span,
+.amount-left-web span {
+  padding-left: 8px;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #7a7a7a;
+}
+
+.amount-left-web {
+  display: none;
+}
+
+.amount-input-section {
+  margin-left: -24px;
+  margin-right: -24px;
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  padding: 24px 24px 0 24px;
+}
+
+.amount-input {
+  width: 108px;
+  height: 48px;
+  position: relative;
+}
+
+.amount-input .input {
+  border-style: none;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 33.5px;
+  width: 108px;
+  height: 48px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17px;
+  padding: 0 41px;
+}
+
+.amount-input span {
+  position: absolute;
+  left: 24px;
+  top: 15px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17px;
+  color: rgba(0, 0, 0, 0.25);
+}
+
+.amount-input .input:focus {
+  outline: none;
+  outline: 1px solid #3cb3ab;
+}
+
+.amount-input .input-right-border {
+  background-color: rgba(0, 0, 0, 0.25);
+  height: 17px;
+  width: 1px;
+  position: absolute;
+  top: 15px;
+  left: 70px;
+}
+
+.amount-section-pledge-label {
+  text-align: center;
+}
+
+.input:focus .input-right-border {
+  background-color: #3cb3ab !important;
+}
+
+.amount-actions-container {
+  padding-top: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
 @media screen and (min-width: 768px) {
+  .card {
+    padding: 32px 26px;
+  }
   .label-info h4 {
     font-size: 16px;
     line-height: 20px;
@@ -85,5 +183,47 @@ input[type='radio']:checked::before {
   .label-info {
     flex-direction: row;
     gap: 16px;
+  }
+
+  .para-container {
+    padding-top: 17px;
+  }
+
+  .amount-left-section {
+    display: none;
+  }
+
+  .amount-left-web {
+    display: block;
+    padding: 0;
+  }
+
+  .pledge-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .amount-input-section {
+    margin-left: -26px;
+    margin-right: -26px;
+    margin-top: 32px;
+  }
+
+  .amount-actions-container {
+    justify-content: start;
+  }
+
+  .amount-input-section-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .amount-actions-container {
+    padding-top: 0;
+  }
+  .amount-section-pledge-label {
+    text-align: left;
   }
 }
