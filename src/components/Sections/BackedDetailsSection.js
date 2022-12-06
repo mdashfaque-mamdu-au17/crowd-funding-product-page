@@ -1,20 +1,22 @@
 import classNames from 'classnames';
 import React from 'react';
+import { useGlobalContext } from '../../store/context';
 import Card from '../Card/Card';
 import Paragraph from '../Texts/Paragraph';
 import Title from '../Texts/Title';
 import classes from './BackedDetailsSection.module.css';
 
 const BackedDetailsSection = () => {
+  const { backedTotal, numberOfBackers } = useGlobalContext();
   let barFillWidth = '0%';
-  barFillWidth = Math.round((89194 / 100000) * 100) + '%';
+  barFillWidth = Math.round((backedTotal / 100000) * 100) + '%';
   return (
     <Card primary={true}>
       <section className={classes['backed-details-section']}>
         <div className={classes['backed-details-container']}>
           <div className={classNames(classes['backed-single-info'])}>
             <div>
-              <Title>$89,194</Title>
+              <Title>${backedTotal.toLocaleString()}</Title>
             </div>
             <div className={classes.paragraph}>
               <Paragraph type="primary" content="of $100,000 backed" />
@@ -29,7 +31,7 @@ const BackedDetailsSection = () => {
             )}
           >
             <div>
-              <Title>5,007</Title>
+              <Title>{numberOfBackers}</Title>
             </div>
             <div className={classes.paragraph}>
               <Paragraph type="primary" content="total backers" />

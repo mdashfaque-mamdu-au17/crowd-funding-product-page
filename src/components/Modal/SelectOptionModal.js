@@ -4,14 +4,19 @@ import { CloseModalIcon } from '../Button/CloseModalIcon';
 import Paragraph from '../Texts/Paragraph';
 import classes from './SelectOptionModal.module.css';
 import SelectBox from '../Card/SelectBox';
+import { useGlobalContext } from '../../store/context';
 
-const SelectOptionModal = ({ onClose }) => {
+const SelectOptionModal = () => {
+  const { closeSelectBoxModal } = useGlobalContext();
   return (
     <Modal type="select-pledge">
       <section className={classes['select-pledge-main']}>
         <div className={classes['select-pledge-heading']}>
           <h3>Back this project</h3>
-          <button className={classes['close-btn']} onClick={onClose}>
+          <button
+            className={classes['close-btn']}
+            onClick={closeSelectBoxModal}
+          >
             <CloseModalIcon />
           </button>
         </div>
