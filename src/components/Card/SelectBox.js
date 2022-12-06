@@ -4,6 +4,7 @@ import { useDetectClickOutside } from 'react-detect-click-outside';
 import Paragraph from '../Texts/Paragraph';
 import Button from '../Button/Button';
 import classes from './SelectBox.module.css';
+import { useGlobalContext } from '../../store/context';
 const SelectBox = (props) => {
   const {
     withReward,
@@ -14,12 +15,25 @@ const SelectBox = (props) => {
     isDisabled,
   } = props;
   const [active, setActive] = useState(false);
+  const [pledgeAmount, setPledgeAmount] = useState(minReward);
+  const { updateBackedTotal, closeSelectBoxModal, updateNumberOfBackers } =
+    useGlobalContext();
   const changeActiveState = () => {
     setActive(false);
   };
   const ref = useDetectClickOutside({ onTriggered: changeActiveState });
   const focusHandler = () => {
     setActive(true);
+  };
+
+  const pledgeAmountChangeHandler = (e) => {
+    setPledgeAmount(e.target.value);
+  };
+
+  const confirmPledgeHandler = () => {
+    updateBackedTotal(pledgeAmount);
+    closeSelectBoxModal();
+    updateNumberOfBackers();
   };
 
   return (
@@ -76,13 +90,20 @@ const SelectBox = (props) => {
                   id="price"
                   placeholder={minReward}
                   className={classes['input']}
-                  maxLength="3"
+                  maxLength="5"
                   pattern="[0-9]+"
+                  value={pledgeAmount}
+                  onChange={pledgeAmountChangeHandler}
                 />
               </div>
 
               <div>
-                <Button type="primary" size="small" isDisabled={isDisabled}>
+                <Button
+                  type="primary"
+                  size="small"
+                  isDisabled={isDisabled}
+                  onClick={confirmPledgeHandler}
+                >
                   Continue
                 </Button>
               </div>
