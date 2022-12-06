@@ -5,6 +5,7 @@ import Paragraph from '../Texts/Paragraph';
 import Button from '../Button/Button';
 import classes from './SinglePledge.module.css';
 import classNames from 'classnames';
+import { useGlobalContext } from '../../store/context';
 
 const SinglePledge = ({
   pledgeName,
@@ -13,6 +14,7 @@ const SinglePledge = ({
   pledgeLeft,
   isDisabled,
 }) => {
+  const { openSelectBoxModal } = useGlobalContext();
   return (
     <Card primary={false}>
       <section
@@ -34,7 +36,12 @@ const SinglePledge = ({
             <Paragraph type="primary" content="left" />
           </div>
           <div>
-            <Button type="primary" size="medium" isDisabled={isDisabled}>
+            <Button
+              type="primary"
+              size="medium"
+              isDisabled={isDisabled}
+              onClick={openSelectBoxModal}
+            >
               {!isDisabled ? 'Select Reward' : 'Out of stock'}
             </Button>
           </div>
