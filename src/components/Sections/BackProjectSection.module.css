@@ -52,6 +52,10 @@
     color: #7a7a7a;
   }
 
+  .bookmark-title-active {
+    color: #147a73;
+  }
+
   .bookmark-icon-mobile {
     display: none;
   }
