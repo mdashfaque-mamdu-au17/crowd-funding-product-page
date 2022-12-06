@@ -3,12 +3,12 @@ import classes from './MainCard.module.css';
 import BackProjectSection from '../Sections/BackProjectSection';
 import BackedDetailsSection from '../Sections/BackedDetailsSection';
 import AboutProject from '../Sections/AboutProject';
-const MainCard = ({ onOpen, children }) => {
+const MainCard = ({ children }) => {
   return (
     <div className={classes['main-card']}>
       <section>
         <div className={classes['backproject-section']}>
-          <BackProjectSection onOpen={onOpen} />
+          <BackProjectSection />
         </div>
         <div className={classes['backed-details-section']}>
           <BackedDetailsSection />

@@ -14,6 +14,7 @@ const Button = ({ type, size, children, isDisabled, onClick }) => {
           classes['btn-small'],
           isDisabled && classes['btn-small-disabled']
         )}
+        onClick={onClick}
       >
         {children}
       </button>
@@ -29,6 +30,7 @@ const Button = ({ type, size, children, isDisabled, onClick }) => {
           isDisabled && classes['btn-medium-disabled']
         )}
         disabled={isDisabled}
+        onClick={onClick}
       >
         {children}
       </button>
@@ -46,7 +48,10 @@ const Button = ({ type, size, children, isDisabled, onClick }) => {
   }
   if (type === 'secondary') {
     return (
-      <button className={classNames(classes['secondary-btn'])}>
+      <button
+        className={classNames(classes['secondary-btn'])}
+        onClick={onClick}
+      >
         {children}
       </button>
     );
