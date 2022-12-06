@@ -1,0 +1,48 @@
+.welcome-container {
+  text-align: center;
+  padding: 32px 24px 40px 24px;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+}
+
+.thank-you-support {
+  padding: 24px 0;
+}
+
+.thank-you-support h3 {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22px;
+  color: #000000;
+}
+
+.btn-container {
+  padding-top: 31.5px;
+}
+@media screen and (min-width: 768px) {
+  .welcome-container {
+    padding: 48.5px 48px;
+  }
+
+  .thank-you-support {
+    padding-top: 47.5px;
+    padding-bottom: 16px;
+  }
+
+  .thank-you-support h3 {
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  .btn-container {
+    padding-top: 32px;
+  }
+
+  .check-icon-container img {
+    width: 90px;
+    height: 90px;
+  }
+}
