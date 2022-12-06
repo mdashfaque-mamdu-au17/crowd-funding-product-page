@@ -1,11 +1,13 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import { enableScroll, disableScroll } from '../utils/utils';
 const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
   const [openSelectBox, setOpenSelectBox] = useState(false);
+  const [thankYou, setThankYou] = useState(false);
   const [backedTotal, setBackedTotal] = useState(89194);
   const [numberOfBackers, setNumberOfBackers] = useState(5007);
+  const numberOfBackersInitial = 5007;
   const closeSelectBoxModal = () => {
     setOpenSelectBox(false);
     enableScroll();
@@ -27,6 +29,28 @@ const AppProvider = ({ children }) => {
     setNumberOfBackers((prev) => prev + 1);
   };
 
+  const openThankYouModal = () => {
+    setThankYou(true);
+    disableScroll();
+  };
+
+  const closeThankYouModal = () => {
+    setThankYou(false);
+    enableScroll();
+  };
+
+  useEffect(() => {
+    if (numberOfBackers > numberOfBackersInitial) {
+      const id = setTimeout(() => {
+        openThankYouModal();
+      }, 1000);
+
+      return () => {
+        clearTimeout(id);
+      };
+    }
+  }, [numberOfBackersInitial, numberOfBackers]);
+
   return (
     <AppContext.Provider
       value={{
@@ -37,6 +61,9 @@ const AppProvider = ({ children }) => {
         updateBackedTotal,
         numberOfBackers,
         updateNumberOfBackers,
+        thankYou,
+        openThankYouModal,
+        closeThankYouModal,
       }}
     >
       {children}
