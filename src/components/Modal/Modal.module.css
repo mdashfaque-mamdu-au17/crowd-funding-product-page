@@ -10,7 +10,6 @@
 
 .modal {
   position: fixed;
-
   left: calc(50% - 163.5px);
   z-index: 30;
   background-color: #ffffff;
@@ -47,10 +46,10 @@
   }
 
   .welcome-modal {
+    position: absolute;
     width: 540px;
+    top: calc(50% - 10%);
     left: calc(50% - 270px);
-    top: 50%;
-    transform: translate(0, -50%);
   }
 }
 
