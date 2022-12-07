@@ -19,7 +19,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Add solution URL here](https://crowd-funding-product-page-ashfaque.vercel.app/)
+- Live Site URL: (https://crowd-funding-product-page-ashfaque.vercel.app/)
 
 ### Built with
 
