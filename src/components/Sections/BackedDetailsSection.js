@@ -9,7 +9,9 @@ import classes from './BackedDetailsSection.module.css';
 const BackedDetailsSection = () => {
   const { backedTotal, numberOfBackers } = useGlobalContext();
   let barFillWidth = '0%';
-  barFillWidth = Math.round((backedTotal / 100000) * 100) + '%';
+  barFillWidth =
+    Math.round(((backedTotal > 100000 ? 100000 : backedTotal) / 100000) * 100) +
+    '%';
   return (
     <Card primary={true}>
       <section className={classes['backed-details-section']}>
