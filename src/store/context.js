@@ -19,9 +19,6 @@ const AppProvider = ({ children }) => {
   };
 
   const updateBackedTotal = (amount) => {
-    if (backedTotal > 100000) {
-      return;
-    }
     setBackedTotal((prev) => prev + Number(amount));
   };
 
